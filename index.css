@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: black;
+}
+
+#options ul{
+    float:right;
+
+}
+
+#options li {
+    display: inline;
+    color: white;
+}
