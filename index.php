@@ -1,3 +1,7 @@
+<?php 
+  include 'includes/autoLoader.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -45,7 +49,10 @@
             <h1>SHOP</h1>
             <p>All our products are handmade</p>
             <div class="product">
-              
+              <?php 
+                $testObj = new CoversContr();
+                $testObj->setCover("alalala", 11);
+              ?>
             </div>
         </div>
       </div>

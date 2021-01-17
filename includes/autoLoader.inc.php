@@ -4,9 +4,9 @@
     function myAutoLoader($className){
         $path = "classes/";
         $ext = ".class.php";
-        $fullPath = $path . $fileName . $ext;
+        $fullPath = $path . $className . $ext;
         
-        if(!file_exists(fullPath)) {
+        if(!file_exists($fullPath)) {
             return false;
         }
 
