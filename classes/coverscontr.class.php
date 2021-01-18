@@ -7,8 +7,20 @@
             return true;
         }
 
+        public function deleteCovers($id) {
+            $this->deleteCover($id);
+        }
+
+        public function updateCovers($name, $description, $price, $id) {
+            $this->updateCover($name, $price, $description, $id);
+        }
+        
         public function createAdmin($uid, $pwd) {
             return $this->registerAdmin($uid, $pwd);
+        }
+
+        public function addSubscriber($name, $email) {
+            $this->subscribeUser($name, $email);
         }
     }
 ?>

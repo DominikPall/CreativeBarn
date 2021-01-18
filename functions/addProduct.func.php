@@ -1,5 +1,6 @@
 <?php 
 include_once "../includes/autoLoader.inc.php";
+
 if(isset($_POST["submit"])) {
     $pname = $_POST['pname'];
     $price = $_POST['price'];
@@ -15,6 +16,7 @@ if(isset($_POST["submit"])) {
         exit();
     }
 }
+
 header("location: ../addproduct.php");
 exit();
 

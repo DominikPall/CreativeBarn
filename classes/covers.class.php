@@ -1,12 +1,21 @@
 <?php
     class Covers extends Dbh {
         
-        protected function getCover($id) {
-            $sql = "SELECT * FROM cover WHERE coverID = ?";
+        protected function getCover() {
+            $sql = "SELECT * FROM cover";
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$id]);
+            $stmt->execute();
 
             $result = $stmt->fetchAll();
+            return $result;
+        }
+
+        protected function getCoverName($name) {
+            $sql = "SELECT * FROM cover where name = ?";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$name]);
+
+            $result = $stmt->fetch();
             return $result;
         }
 
@@ -57,16 +66,30 @@
             
         }
 
-        protected function subscribeUser($name, $email) {
-            if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                return false;
-            } else {
-                $sql = "INSERT INTO subscribers(email, name) VALUES(?,?)";
-                $stmt = $this->connect()->prepare($sql);
-                $stmt = $execute([$email, $name]);
-            }
+        protected function updateCover($name, $price, $description, $id) {
+            $sql = "UPDATE cover
+                    SET name = ?,
+                    price = ?,
+                    description = ? where coverID = ?";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$name, $price, $description, $id]);
+        }
 
-            return true;
+        protected function deleteCover($id) {
+            $sqlpic = "DELETE FROM pictures where coverID = ?";
+            $sql = "DELETE FROM cover where coverID = ?";
+
+            $stmt2 = $this->connect()->prepare($sqlpic);
+            $stmt = $this->connect()->prepare($sql);
+            
+            $stmt2->execute([$id]);
+            $stmt->execute([$id]);
+        }
+
+        protected function subscribeUser($name, $email) {
+            $sql = "INSERT INTO subscribers(email, name) VALUES(?,?)";
+            $stmt = $this->connect()->prepare($sql);
+            $stmt->execute([$email, $name]);
         }
 
         protected function loginAdmin($uid, $pwd) {

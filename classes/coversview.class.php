@@ -1,9 +1,14 @@
 <?php
     class CoversView extends Covers {
         
-        public function showCover($id) {
-            $result = $this->getCover($id);
-            echo $result[0]['price'] . '<br>';
+        public function showCover() {
+            $result = $this->getCover();
+            return  $result;
+        }
+
+        public function showCoverByName($name) {
+            $result = $this->getCoverName($name);
+            return $result;
         }
 
         public function showPictur($id) {

@@ -7,7 +7,6 @@ if(isset($_POST["submit"])) {
     $cont = new CoversContr();
 
     if($cont->createAdmin($username, $pwd)) {
-
     } else {
         header("location: ../register.php?error=adminExists");
         exit();

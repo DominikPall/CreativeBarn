@@ -1,20 +1,13 @@
 <?php 
-  include 'includes/autoLoader.inc.php';
+  include 'nav&foot/header.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Creative Barn Shop</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/form.css">
     </head>
     
     <body>
+    <?php 
+        include_once 'nav&foot/navbar.php';
+    ?>
     <form action="functions/addProduct.func.php" method="post" id="form">
         <label for="pname">Product Name</label><br>
         <input type="text" id="pname" name="pname" required><br>
