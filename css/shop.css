@@ -1,0 +1,61 @@
+* {
+    overflow-x: hidden;
+}
+body {
+    background-color: rgb(252, 213, 154);
+}
+
+h1 {
+    overflow: hidden;
+}
+
+.prod h1 {
+    text-align: center;
+}
+
+.nadpis {
+    margin-top: 8vh;
+    text-align: center;
+    margin-left: 2vw;
+}
+
+.onerow, .tworow, .threerow {
+    margin-top: 2vh;
+    margin-left: 10vw;
+}
+
+img {
+    max-width: 50%;
+    max-height: 80%;
+}
+
+.prod {
+    overflow: hidden;
+    margin-left: 5vw;
+    width: 20vw;
+    height: 40vh;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.next {
+    background-color: cornflowerblue;
+    width:300px;
+    height: 300px;
+}
+
+@media screen and (max-width: 1020px) {
+    .prod {
+        width: 75vw;
+        margin-bottom: 5vh;
+    }
+
+    .second-row {
+        margin-top: 0;
+    }
+
+    .third-row {
+        margin-top: 0;
+    }
+}

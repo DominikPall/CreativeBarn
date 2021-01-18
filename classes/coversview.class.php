@@ -11,7 +11,7 @@
             return $result;
         }
 
-        public function showPictur($id) {
+        public function showPicture($id) {
             $result = $this->getPics($id);
             return $result;
         }

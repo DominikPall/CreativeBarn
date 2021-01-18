@@ -1,7 +1,7 @@
 <?php
   include 'nav&foot/header.php';
 ?>
-        <title>Creative Barn</title>
+        <title>Creative Barn Shop</title>
         <link rel="stylesheet" href="css/index.css">
       </head>
 
