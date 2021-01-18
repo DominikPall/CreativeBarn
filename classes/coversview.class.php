@@ -5,5 +5,10 @@
             $result = $this->getCover($id);
             echo $result[0]['price'] . '<br>';
         }
+
+        public function showPictur($id) {
+            $result = $this->getPics($id);
+            return $result;
+        }
     }
 ?>
