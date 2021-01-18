@@ -1,22 +1,31 @@
-<?php 
-  include 'includes/autoLoader.inc.php';
-  include 'header.php';
+<?php
+  include 'nav&foot/header.php';
 ?>
 
 
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Creative Barn Register</title>
     </head>
+    <?php 
 
+    ?>
     <body>
-    <form id="form">
-        <label for="pname">User Name</label><br>
-        <input type="text" id="pname" name="pname" required><br>
-        <label for="price">Password</label><br>
-        <input type="text" id="price" name="price" required>
+    <form action="functions/register.func.php" method="post" id="form">
+        <label for="uid">User Name</label><br>
+        <p id="error"></p>
+        <input type="text" id="uid" name="uid" required><br>
+        <label for="pwd">Password</label><br>
+        <input type="text" id="pwd" name="pwd" required>
+        <?php 
+          if(isset($_GET['error'])) {
+            if($_GET["error"] == "adminExists") {
+              echo "<p>Admin already exists, cannot create new admin</p>";
+            }
+          }
+        ?>
         <br>
         <br>
-        <input type="submit">
+        <button type="submit" name="submit" role ="button" class="btn btn-outline-dark">Sign Up</button>
     </form>
     </body>
 </html>

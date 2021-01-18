@@ -1,12 +1,14 @@
 <?php 
     class CoversContr extends Covers {
 
-        public function setCover($description, $price) {
-            $this->setCover($description, $price);
+        public function setCovers($name, $description, $price, $url) {
+            $id = $this->setCover($name, $description, $price);
+            $this->setPicture($url, $id);
+            return true;
         }
 
-        public function setPicture($url, $id) {
-            $this->setPicture($url, $id);
+        public function createAdmin($uid, $pwd) {
+            return $this->registerAdmin($uid, $pwd);
         }
     }
 ?>

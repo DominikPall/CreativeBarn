@@ -15,6 +15,14 @@
             <li><a href="#">Home</a></li>
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">SHOP</a></li>
+            <?php
+                if(isset($_SESSION["username"])) {
+                  echo "<li><a href=3>ADD</a></li>";
+                  echo "<li><a href=#>UPDATE</a></li>";
+                  echo "<li><a href=#>REMOVE</a></li>";
+                  echo "<li><a href=#>LOGOUT</a></li>";
+                }
+            ?>
           </ul>
         </div>
     </nav>

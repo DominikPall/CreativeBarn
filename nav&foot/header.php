@@ -1,5 +1,6 @@
 <?php 
   include 'includes/autoLoader.inc.php';
+  session_start();
 ?>
 
 <!DOCTYPE html>

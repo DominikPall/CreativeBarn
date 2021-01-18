@@ -11,18 +11,20 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="css/form.css">
     </head>
     
     <body>
-    <form id="form">
-        <label for="fname">User name</label><br>
-        <input type="text" id="fname" name="fname" required><br>
-        <label for="lname">Password</label><br>
-        <input type="text" id="lname" name="lname" required>
+    <form action="functions/login.func.php" method="post" id="form">
+        <label for="uid">User name</label><br>
+        <input type="text" id="uid" name="uid" required><br>
+        <label for="pwd">Password</label><br>
+        <input type="text" id="pwd" name="pwd" required>
         <br>
         <br>
-        <input type="submit">
+        <button type="submit" name="submit" role ="button" class="btn btn-outline-dark">Login</button>
     </form>
+
+    <script>
     </body>
 </html>

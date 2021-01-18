@@ -10,5 +10,9 @@
             $result = $this->getPics($id);
             return $result;
         }
+
+        public function logAdmin($uid, $pwd) {
+            return $this->loginAdmin($uid, $pwd);
+        }
     }
 ?>
