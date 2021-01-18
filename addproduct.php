@@ -16,10 +16,14 @@
     
     <body>
     <form id="form">
-        <label for="fname">User name</label><br>
-        <input type="text" id="fname" name="fname" required><br>
-        <label for="lname">Password</label><br>
-        <input type="text" id="lname" name="lname" required>
+        <label for="pname">Product Name</label><br>
+        <input type="text" id="pname" name="pname" required><br>
+        <label for="price">Price</label><br>
+        <input type="text" id="price" name="price" required>
+        <label for="pic">Picture</label><br>
+        <input type="text" id="pic" name="pic" required>
+        <label for="desc">Description</label><br>
+        <input type="text" id="desc" name="desc" required>
         <br>
         <br>
         <input type="submit">
