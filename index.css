@@ -1,11 +1,11 @@
 *{
-    overflow-x: unset;
+    overflow-x: hidden;
 }
 
 h1 {
     font-size: 3vw;
     font-family: "Brush script m7", cursive;
-    
+    overflow: hidden;
 }
 
 .navbar-header {
@@ -31,6 +31,7 @@ h1 {
     font-weight: bolder;
     margin-top: 45vh;
     color: black;
+    overflow: hidden;
 }
 
 .banner .btn {
@@ -40,10 +41,11 @@ h1 {
 }
 .shop {
     width: 102vw;
-    height: 100vh;
+    height: 85vh;
     text-align: center;
     align-items: center;
     align-content: center;
+    background-color: rgb(233, 233, 233);
 }
 
 .shop h1 {
@@ -57,9 +59,44 @@ h1 {
     font-size: 1vw;
 }
 
-.shop .product {
-    margin-left: 43vw;
+.shop #product {
+    margin-top: 5vh;
+    margin-left: 42.75vw;
     width: 15vw;
-    height: 18vw;
-    background-color: green;
+    height: 30vw;
+}
+
+#productImage {
+    margin-left: 3vw;
+    width: 15vw;
+    height: 25vh;
+    background-image: url(https://i0.wp.com/creativebarn.net/wp-content/uploads/2018/11/IMG_2310.jpg?resize=600%2C387&ssl=1);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (max-width: 1020px) {
+    h1 {
+        font-size: 10vw;
+    }
+
+    .shop p {
+        font-size: 7vw;
+    }
+
+    .shop {
+        height: 95vh;
+    }
+
+    .shop #product {
+        margin-left: 10vw;
+        width: 80vw;
+        height: 60vh;
+    }
+
+    #productImage {
+        margin-left: 5vw;
+        width: 80vw;
+    }
+
 }

@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+        
         <link rel="stylesheet" href="index.css">
       </head>
       <body>
@@ -48,13 +48,17 @@
         <div class="col-sm-12 shop">
             <h1>SHOP</h1>
             <p>All our products are handmade</p>
-            <div class="product">
-              <?php 
-                $testObj = new CoversContr();
-                $testObj->setCover("alalala", 11);
-              ?>
+            <div id="product">
+              <h3 id="name">Kindle Paperwhite Case Tartan</h3>
+              <a href = "amazon.com">
+                <div id="productImage">
+                </div>
+              </a>
+              <h3 id="price">9,99$</h3>
+              <button>Buy now</button>
             </div>
         </div>
       </div>
-  </body>      
+  </body>
+  <script src="index.js"></script>
 </html>
