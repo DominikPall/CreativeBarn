@@ -1,5 +1,6 @@
 * {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body {
     background-color: rgb(252, 213, 154);
@@ -13,14 +14,14 @@ h1 {
     text-align: center;
 }
 
-.nadpis {
-    margin-top: 8vh;
+#nadpis {
+    margin-top: 6vh;
     text-align: center;
     margin-left: 2vw;
 }
 
 .onerow, .tworow, .threerow {
-    margin-top: 2vh;
+    margin-top: 0vh;
     margin-left: 10vw;
 }
 
@@ -43,6 +44,15 @@ img {
     background-color: cornflowerblue;
     width:300px;
     height: 300px;
+}
+#footer {
+    background-color:#fff;
+        font:bold 14px;
+        color:#1E88E5;
+        width:50%;
+        height:auto;
+        padding:1%;
+        border-top:1px solid #1E88E5;
 }
 
 @media screen and (max-width: 1020px) {

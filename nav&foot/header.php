@@ -1,7 +1,7 @@
 <?php 
   session_start();
-  include_once 'includes/autoLoader.inc.php';
   include_once 'nav&foot/navbar.php';
+  include_once 'includes/autoLoader.inc.php';
 ?>
 
 <!DOCTYPE html>

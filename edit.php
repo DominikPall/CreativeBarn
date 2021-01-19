@@ -13,8 +13,8 @@
             <?php
                 $index = 0;
                 while($rows = $result[$index]) {
-                    $name =$rows['name'];
-                    echo "<option value='$name'>$name</option>";
+                    $name = $rows['name'];
+                    echo "<option value='$rows[coverID]'>$name</option>";
                     $index++;
                 }
             ?>

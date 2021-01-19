@@ -1,4 +1,5 @@
 <?php
+    include_once 'dbh.class.php';
     class Covers extends Dbh {
         
         protected function getCover() {
@@ -10,10 +11,10 @@
             return $result;
         }
 
-        protected function getCoverName($name) {
-            $sql = "SELECT * FROM cover where name = ?";
+        protected function getCoverId($id) {
+            $sql = "SELECT * FROM cover where coverID = ?";
             $stmt = $this->connect()->prepare($sql);
-            $stmt->execute([$name]);
+            $stmt->execute([$id]);
 
             $result = $stmt->fetch();
             return $result;

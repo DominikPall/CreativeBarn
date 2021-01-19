@@ -1,7 +1,9 @@
 *{
     overflow-x: hidden;
 }
-
+ul {
+    color: white;
+}
 h1 {
     font-size: 3vw;
     font-family: "Brush script m7", cursive;

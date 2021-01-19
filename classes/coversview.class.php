@@ -1,4 +1,5 @@
 <?php
+    include_once 'covers.class.php';
     class CoversView extends Covers {
         
         public function showCover() {
@@ -6,8 +7,8 @@
             return  $result;
         }
 
-        public function showCoverByName($name) {
-            $result = $this->getCoverName($name);
+        public function showCoverById($id) {
+            $result = $this->getCoverId($id);
             return $result;
         }
 

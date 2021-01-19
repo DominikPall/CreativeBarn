@@ -1,17 +1,17 @@
 <?php
-include_once "../includes/autoLoader.inc.php";
-if(isset($_POST["submit"])) {
-    $username = $_POST['uid'];
-    $pwd = $_POST['pwd'];
+    include_once "../includes/autoLoader.inc.php";
+    if(isset($_POST["submit"])) {
+        $username = $_POST['uid'];
+        $pwd = $_POST['pwd'];
 
-    $cont = new CoversContr();
+        $cont = new CoversContr();
 
-    if($cont->createAdmin($username, $pwd)) {
-    } else {
-        header("location: ../register.php?error=adminExists");
-        exit();
+        if($cont->createAdmin($username, $pwd)) {
+        } else {
+            header("location: ../register.php?error=adminExists");
+            exit();
+        }
+        header("location: ../index.php");
     }
-    header("location: ../index.php");
-}
-header("location: ../login.php");
+    header("location: ../login.php");
 ?>

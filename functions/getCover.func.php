@@ -1,9 +1,9 @@
 <?php
     include_once "../includes/autoLoader.inc.php";
 
-    $name = $_GET['q'];
+    $id = $_GET['q'];
     $cover = new CoversView();
-    $result = $cover->showCoverByName($name);
+    $result = $cover->showCoverById($id);
 
     echo  "<form action='functions/edit.func.php' method='post'>";
     echo "
