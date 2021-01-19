@@ -5,11 +5,10 @@
 
     <link rel="stylesheet" href="css/form.css">
     <title>Creative Barn Register</title>
-    </head>
     <?php 
-
+      include_once 'nav&foot/navbar.php';
     ?>
-    <body>
+    
     <form action="functions/register.func.php" method="post" id="form">
         <label for="uid">User Name</label><br>
         <p id="error"></p>
@@ -25,7 +24,7 @@
         ?>
         <br>
         <br>
-        <button type="submit" name="submit" role ="button" class="btn btn-outline-dark">Sign Up</button>
+        <button type="submit" name="submit" class="btn btn-outline-dark">Sign Up</button>
     </form>
     </body>
 </html>

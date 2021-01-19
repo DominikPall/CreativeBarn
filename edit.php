@@ -2,35 +2,38 @@
   include 'nav&foot/header.php';
 ?>
     <link rel="stylesheet" href="css/form.css">
-    </head>
-    <body>
+    <title>CreativeBarn Edit</title> 
+    <?php 
+        include_once 'nav&foot/navbar.php';
+    ?>
+    
+    <?php
+        $coverView = new CoversView();
+        $result = $coverView->showCover();
+    ?>
+    <select name="covers" id="form" onchange="showEdit(this.value)">
+    <option value="">Select a cover:</option>
         <?php
-            $coverView = new CoversView();
-            $result = $coverView->showCover();
-        ?>
-        <select name="covers" id="form" onchange="showEdit(this.value)">
-        <option value="">Select a cover:</option>
-            <?php
-                $index = 0;
-                while($rows = $result[$index]) {
-                    $name = $rows['name'];
-                    echo "<option value='$rows[coverID]'>$name</option>";
-                    $index++;
-                }
-            ?>
-        </select>
-        <div id="cover">
-        <p>Your cover will be here</p>
-        </div>
-        <?php
-            if(isset($_GET['q'])) {
-                if($_GET['q'] == 'success') {
-                    echo "<p>EDIT WAS SUCCESS</p>";
-                } else if ($_GET['q'] == 'deleted') {
-                    echo "<p> Product was deleted </p>";
-                }
+            $index = 0;
+            while($rows = $result[$index]) {
+                $name = $rows['name'];
+                echo "<option value='$rows[coverID]'>$name</option>";
+                $index++;
             }
         ?>
+    </select>
+    <div id="cover">
+    <p>Your cover will be here</p>
+    </div>
+    <?php
+        if(isset($_GET['q'])) {
+            if($_GET['q'] == 'success') {
+                echo "<p>EDIT WAS SUCCESS</p>";
+            } else if ($_GET['q'] == 'deleted') {
+                echo "<p> Product was deleted </p>";
+            }
+        }
+    ?>
 
     <script>
         function showEdit(str) {

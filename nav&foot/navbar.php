@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="nav&foot/navbar.css">
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-header">
@@ -12,8 +13,7 @@
     
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">ABOUT</a></li>
+            <li><a href="index.php">HOME</a></li>
             <li><a href="shop.php">SHOP</a></li>
             
             <?php

@@ -1,11 +1,12 @@
 <?php 
   include 'nav&foot/header.php';
 ?>
-
+<title>CreativeBarn Subscribe</title> 
 <link rel="stylesheet" href="css/form.css">
-</head>
+<?php 
+  include_once 'nav&foot/navbar.php';
+?>
 
-<body>
     <form action="functions/addSub.func.php" method="post" id="form">
     <label for="uname">Name</label><br>
     <input type="text" id="name" name="name"><br>
@@ -14,7 +15,7 @@
       id="email" name="email" required>
     <br>
     <br>
-    <button type="submit" name="submit" role ="button" class="btn btn-outline-dark">Subscribe</button>
+    <button type="submit" name="submit" class="btn btn-outline-dark">Subscribe</button>
     <?php 
       if(isset($_GET['q'])) {
         echo "<p>Thank you for subscribing</p>";

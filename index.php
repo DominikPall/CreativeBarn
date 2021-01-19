@@ -1,9 +1,11 @@
 <?php
   include 'nav&foot/header.php';
 ?>
-        <title>Creative Barn Shop</title>
+        <title>Creative Barn</title>
         <link rel="stylesheet" href="css/index.css">
-      </head>
+        <?php 
+        include_once 'nav&foot/navbar.php';
+        ?>
 
       <div class="row">
         <div class="col-sm-12 banner">

@@ -4,7 +4,10 @@
 
 <title>Creative Barn</title>
 <link rel="stylesheet" href="css/product.css">
-</head>
+<?php 
+  include_once 'nav&foot/navbar.php';
+?>
+
 <div id="down">
   <?php
     $product = new Product();

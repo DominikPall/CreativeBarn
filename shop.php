@@ -4,6 +4,9 @@
 
 <title>Creative Barn</title>
 <link rel="stylesheet" href="css/shop.css">
+<?php 
+  include_once 'nav&foot/navbar.php';
+?>
 
 <script>
   var x = 0;
