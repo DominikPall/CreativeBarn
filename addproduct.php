@@ -7,12 +7,12 @@
     <?php 
         include_once 'nav&foot/navbar.php';
     ?>
-    
+
     <form action="functions/addProduct.func.php" method="post" id="form">
         <label for="pname">Product Name</label><br>
         <input type="text" id="pname" name="pname" required><br>
         <label for="price">Price</label><br>
-        <input type="text" id="price" name="price" required><br>
+        <input type="number" id="price" name="price" required><br>
         <label for="pic">Picture</label><br>
         <input type="text" id="pic" name="pic" required><br>
         <label for="desc">Description</label><br>
